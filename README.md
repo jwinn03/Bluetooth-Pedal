@@ -1,0 +1,1 @@
+This is the repository for my ESP32-based Bluetooth pedal for musicians. The original Arduino .ino sketch is in the old/ folder.
