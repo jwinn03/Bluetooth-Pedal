@@ -1,1 +1,1 @@
-This is the repository for my ESP32-based Bluetooth pedal for musicians. The original Arduino .ino sketch is in the old/ folder.
+This is the repository for my ESP32-based Bluetooth pedal for musicians. The original Arduino .ino sketch is in the old/ folder, and the PlatformIO implementation is in the bluetooth_pedal folder.
