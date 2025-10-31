@@ -1,18 +1,26 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// Define the GPIO pin for the built-in LED.
+// On many ESP32 boards, this is GPIO 2.
+#define LED_PIN 13
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  // Initialize serial communication
+  Serial.begin(115200);
+  
+  // Set the LED pin as an output
+  pinMode(LED_PIN, OUTPUT);
+  Serial.println("Hello from ESP32!");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+  // Turn the LED on
+  digitalWrite(LED_PIN, HIGH);
+  Serial.println("LED is ON");
+  delay(1000); // Wait for 1 second
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  // Turn the LED off
+  digitalWrite(LED_PIN, LOW);
+  Serial.println("LED is OFF");
+  delay(1000); // Wait for 1 second
 }
