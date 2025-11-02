@@ -102,7 +102,7 @@ BleKeyboard::BleKeyboard(std::string deviceName, std::string deviceManufacturer,
 
 void BleKeyboard::begin(void)
 {
-  BLEDevice::init(String(deviceName.c_str()));
+  BLEDevice::init(deviceName.c_str());
   BLEServer* pServer = BLEDevice::createServer();
   pServer->setCallbacks(this);
 
@@ -113,7 +113,7 @@ void BleKeyboard::begin(void)
 
   outputKeyboard->setCallbacks(this);
 
-  hid->manufacturer()->setValue(String(deviceManufacturer.c_str()));
+  hid->manufacturer()->setValue(deviceManufacturer.c_str());
 
   hid->pnp(0x02, 0xe502, 0xa111, 0x0210);
   hid->hidInfo(0x00, 0x01);
